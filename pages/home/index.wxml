@@ -1,0 +1,23 @@
+<!--pages/home/index.wxml-->
+<!-- <text>pages/home/index.wxml</text> -->
+<view>
+  <view class="userinfo">
+		<image class="userinfo-avatar" src="/images/login.jpg" background-size="cover"></image>
+		<text class="userinfo-nickname">花店</text>
+	</view>
+  <view style="height:10rpx;background: #eee;width:100%;"></view>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>  
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block> 
+  </swiper>
+  <!-- <view style="float:none;width:100%;flex-direction:row-reverse;zoom:1;overflow:hidden;">
+    <view wx:for="{{canyushangarray}}" class="canyushang" bindtap="tapC" data-cid="{{item.id}}">
+      <image mode="aspectFill" style="width: 100%" src="{{src}}"></image>
+      <text class='wenzi'>{{data.name}}</text>
+    </view>
+  </view> -->
+  <view class="no-more-goods">没有更多啦</view>
+</view>
